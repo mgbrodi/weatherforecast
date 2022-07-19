@@ -13,5 +13,7 @@ metadata:
       icon: github
 spec:
   type: openapi
+  lifecycle: experimental
+  owner: default-team
   definition:
     $text: https://github.com/APIs-guru/openapi-directory/blob/main/APIs/archive.org/wayback/1.0.0/openapi.yaml
