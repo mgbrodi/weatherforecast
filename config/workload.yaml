@@ -11,6 +11,6 @@ metadata:
 spec:
   source:
     git:
-      url: https://github.com/sample-accelerators/csharp-weatherforecast
+      url: https://github.com/mgbrodi/weatherforecast
       ref:
         branch: main
