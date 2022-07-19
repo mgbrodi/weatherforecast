@@ -16,4 +16,4 @@ spec:
   lifecycle: experimental
   owner: default-team
   definition:
-    $text: https://github.com/APIs-guru/openapi-directory/blob/main/APIs/archive.org/wayback/1.0.0/openapi.yaml
+    $text: https://weatherforecast.cody.tap-view.tanzu-azure-lab.winterfell.fun/swagger/v1/swagger.yaml
