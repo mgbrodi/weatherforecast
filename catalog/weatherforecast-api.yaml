@@ -14,7 +14,7 @@ metadata:
 spec:
   type: openapi
   lifecycle: experimental
-  owner: default-team
+  owner: dev-team-1
   definition: |
     openapi: 3.0.1
     info:
