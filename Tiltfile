@@ -1,6 +1,6 @@
-SOURCE_IMAGE = os.getenv("SOURCE_IMAGE", default='harbor.marygabry.name/library/steeltoe-weatherforecast-source') # update registry
+SOURCE_IMAGE = os.getenv("SOURCE_IMAGE", default='gcr.io/pa-mbrodi/temp/weatherforecast') # update registry
 LOCAL_PATH = os.getenv("LOCAL_PATH", default='.')
-NAMESPACE = os.getenv("NAMESPACE", default='cody')
+NAMESPACE = os.getenv("NAMESPACE", default='default')
 NAME = "weatherforecast"
 
 k8s_custom_deploy(
@@ -19,7 +19,7 @@ k8s_custom_deploy(
   ]
 )
 
-k8s_resource(NAME, port_forwards=["8080:8080"],
+k8s_resource(NAME, port_forwards=["8081:8080"],
             extra_pod_selectors=[{'serving.knative.dev/service': 'weatherforecast'}])
 
-allow_k8s_contexts('dpfeffer-tap-iterate')
+allow_k8s_contexts('akslab2')
