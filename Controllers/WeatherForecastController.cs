@@ -28,7 +28,8 @@ public class WeatherForecastController : ControllerBase
                 Summary = "Perceived by human: " + Summaries[Random.Shared.Next(Summaries.Length)]
             })
             .ToArray();
-
+        
+        Console.WriteLine("New Weather forecast<br>");
         foreach ( WeatherForecast wf in weatherForecast) {
             Console.WriteLine(wf.ToString());
         }
