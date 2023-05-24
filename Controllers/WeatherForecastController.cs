@@ -21,12 +21,26 @@ public class WeatherForecastController : ControllerBase
     [HttpGet]
     public IEnumerable<WeatherForecast> Get()
     {
-        return Enumerable.Range(1, 3).Select(index => new WeatherForecast
+        var weatherForecast= Enumerable.Range(1, 3).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
                 TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = "Here is " + Summaries[Random.Shared.Next(Summaries.Length)]
+                Summary = "Perceived by human: " + Summaries[Random.Shared.Next(Summaries.Length)]
             })
             .ToArray();
+        
+        Console.WriteLine("New Weather forecast<br>");
+        foreach ( WeatherForecast wf in weatherForecast) {
+            Console.WriteLine(wf.ToString());
+        }
+        return weatherForecast;
+
+        // return Enumerable.Range(1, 3).Select(index => new WeatherForecast
+        //     {
+        //         Date = DateTime.Now.AddDays(index),
+        //         TemperatureC = Random.Shared.Next(-20, 55),
+        //         Summary = "Here is the perceived: " + Summaries[Random.Shared.Next(Summaries.Length)]
+        //     })
+        //     .ToArray();
     }
 }
