@@ -12,6 +12,6 @@ public class WeatherForecast
 
     public override string ToString()
     {
-        return $"Hette: {Summary} - Date: {Date} - C: {TemperatureC} - F: {TemperatureF}";
+        return $"Here: {Summary} - Date: {Date} - C: {TemperatureC} - F: {TemperatureF}";
     }
 }
